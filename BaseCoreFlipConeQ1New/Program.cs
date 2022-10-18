@@ -2,17 +2,33 @@
 {
     internal class Program
     {
-        static void Main(string[] args)
+        public static bool isPrime(int i)
         {
-            double s = 0.0;
-            Console.WriteLine("Please Enter Your Number : ");
-            int n = Convert.ToInt32(Console.ReadLine());
-            for (int i = 1; i <= n; i++)
+            for (int j = 2; j < i; j++)
             {
-                Console.WriteLine(i);
-                s += 1 / (float)i;
+                if (i % j == 0)
+                {
+                    return false;
+                }
             }
-            Console.WriteLine("Harmonic Series is :" + s);
+            return true;
+        }
+        public static void Main(String[] args)
+        {
+            Program u = new Program();
+            Console.WriteLine("Enter the no. to find PrimeFactors:");
+            int n = Convert.ToInt32(Console.ReadLine());
+
+            Console.WriteLine("The prime factors for the " + n + " is:");
+
+            for (int i = 2; i <= n; i++)
+            {
+                if (isPrime(i))
+                {
+                    Console.WriteLine(i + " ");
+                }
+            }
+            Console.WriteLine();
         }
     }
 }
