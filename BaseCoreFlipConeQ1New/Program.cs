@@ -11,8 +11,8 @@
             for (int i = 0; i < Toss; i++)
             {
                 Random random = new Random();
-                int di = random.Next(0, 2);
-                if (di < 0.5)
+                int dice = random.Next(0, 2);
+                if (dice < 0.5)
                 {
                     HCount += 1;
                 }
