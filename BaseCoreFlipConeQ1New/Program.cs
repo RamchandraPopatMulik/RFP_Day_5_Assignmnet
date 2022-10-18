@@ -4,36 +4,23 @@
     {
         public static void Main(String[] args)
         {
-            Console.WriteLine("Please Enter Your Alphabats: ");
-            char ch = Convert.ToChar(Console.ReadLine().ToLower());
-
-            if (ch >= 48 && ch <= 57)
+            Console.WriteLine("Please Enter Your First Number: ");
+            int a = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Please Enter Your Second Number: ");
+            int b = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Please Enter Your Third Number: ");
+            int c = Convert.ToInt32(Console.ReadLine());
+            if (a > b && a > c)
             {
-                Console.WriteLine("You entered a number, Please enter an alpahbet.");
+                Console.WriteLine("Maximum Number is :" + a);
+            }
+            else if (b > c && b > a)
+            {
+                Console.WriteLine("Maximum Number is " + b);
             }
             else
             {
-                switch (ch)
-                {
-                    case 'a':
-                        Console.WriteLine("The Alphabet is vowel");
-                        break;
-                    case 'i':
-                        Console.WriteLine("The Alphabet is vowel");
-                        break;
-                    case 'o':
-                        Console.WriteLine("The Alphabet is vowel");
-                        break;
-                    case 'u':
-                        Console.WriteLine("The Alphabet is vowel");
-                        break;
-                    case 'e':
-                        Console.WriteLine("The Alphabet is vowel");
-                        break;
-                    default:
-                        Console.WriteLine("The Alphabet is not a vowel");
-                        break;
-                }
+                Console.WriteLine("Maximum Number is " + c);
             }
         }
     }
