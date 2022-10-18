@@ -4,16 +4,36 @@
     {
         public static void Main(String[] args)
         {
-            Console.WriteLine("Please Enter Your Number");
-            int n = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Please Enter Your Alphabats: ");
+            char ch = Convert.ToChar(Console.ReadLine().ToLower());
 
-            if (n % 2 == 0)
+            if (ch >= 48 && ch <= 57)
             {
-                Console.WriteLine("THIS IS EVEN NUMBER");
+                Console.WriteLine("You entered a number, Please enter an alpahbet.");
             }
             else
             {
-                Console.WriteLine("THIS IS ODD NUMBER");
+                switch (ch)
+                {
+                    case 'a':
+                        Console.WriteLine("The Alphabet is vowel");
+                        break;
+                    case 'i':
+                        Console.WriteLine("The Alphabet is vowel");
+                        break;
+                    case 'o':
+                        Console.WriteLine("The Alphabet is vowel");
+                        break;
+                    case 'u':
+                        Console.WriteLine("The Alphabet is vowel");
+                        break;
+                    case 'e':
+                        Console.WriteLine("The Alphabet is vowel");
+                        break;
+                    default:
+                        Console.WriteLine("The Alphabet is not a vowel");
+                        break;
+                }
             }
         }
     }
