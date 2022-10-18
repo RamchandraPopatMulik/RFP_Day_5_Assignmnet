@@ -4,16 +4,15 @@
     {
         static void Main(string[] args)
         {
-            int i = 0;
-            int power = 1;
-            Console.WriteLine("Please Enter Your Number :");
-            int num = Convert.ToInt32(Console.ReadLine());
-            while (i <= num)
+            double s = 0.0;
+            Console.WriteLine("Please Enter Your Number : ");
+            int n = Convert.ToInt32(Console.ReadLine());
+            for (int i = 1; i <= n; i++)
             {
-                power = 2 * power;
-                Console.WriteLine(power);
-                i++;
+                Console.WriteLine(i);
+                s += 1 / (float)i;
             }
+            Console.WriteLine("Harmonic Series is :" + s);
         }
     }
 }
